@@ -50,7 +50,7 @@ p {
 
 .hero-section {
     position: relative; 
-    background-image: url('img/header.jpg'); 
+    background-image: url('/img/header.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
@@ -165,10 +165,6 @@ p {
 
 .portfolio-item:hover .portfolio-overlay h4 {
     transform: translateY(0);
-}
-
-.graffiti-font {
-    font-family: 'Roboto', sans-serif;
 }
 
 .slick-prev, .slick-next {
