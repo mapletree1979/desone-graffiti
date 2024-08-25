@@ -2,12 +2,12 @@ $(document).ready(function(){
     $('.portfolio-carousel').slick({
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 1000,
         arrows: true,
         slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 1500,
         responsive: [
             {
                 breakpoint: 1024,
@@ -75,30 +75,11 @@ $(document).ready(function(){
         });
     }).scroll();
 
-    $('form').submit(function(e) {
-        e.preventDefault();
-        var name = $('input[type="text"]').val();
-        var email = $('input[type="email"]').val();
-        var message = $('textarea').val();
-
-        if (name.length < 2) {
-            alert('Please enter a valid name');
-            return;
-        }
-
-        if (email.indexOf('@') == -1 || email.indexOf('.') == -1) {
-            alert('Please enter a valid email address');
-            return;
-        }
-
-        if (message.length < 10) {
-            alert('Please enter a message with at least 10 characters');
-            return;
-        }
-
-        console.log('Form submitted successfully');
-
-    });
-
     $('img').attr('loading', 'lazy');
+
+    var lightbox = new SimpleLightbox('.lightbox-trigger', {
+        captionsData: 'alt',
+        fadeSpeed: 200,
+        animationSpeed: 400,
+    });
 });
